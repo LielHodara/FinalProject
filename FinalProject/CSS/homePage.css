@@ -1,0 +1,317 @@
+/* the top */
+
+
+.header.finisher-header {
+  display: flex;
+  align-items: center;
+}
+
+
+
+.body {
+  min-height: 100vh;
+  height: auto;
+  margin: 0;
+  background-color: #eaf2f9;
+}
+
+.tit {
+  color: aliceblue;
+  text-align: center;
+  font-weight: bold;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform:
+    translateX(-50%);
+  padding-top: 20px;
+}
+
+.tit2 {
+  color: aliceblue;
+  text-align: right;
+  font-weight: bold; 
+  position: absolute; 
+  top: 0; 
+  right: 5%;
+  transform: translateX(50%); 
+  padding-top: 20px;
+
+}
+
+a {
+  position: relative;
+  display: inline-block;
+  padding: 10px 15px;
+  margin: 20px 0;
+  margin-right: 25px;
+  color: #041313;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.5s;
+  letter-spacing: 2px;
+  overflow: hidden;
+}
+
+a:hover {
+  background: #ff4040;
+  color: #080101;
+  box-shadow: 0 0 2px #ff4040, 0 0 5px #ff4040, 0 0 10px #ff4040,
+    0 0 50px #ff4040;
+  border-radius: 20px;
+  box-shadow: 3px 3px gray;
+
+}
+
+
+a:nth-child(1) {
+  filter: hue-rotate(0deg);
+}
+
+a span {
+  position: absolute;
+  display: block;
+}
+
+a span:nth-child(1) {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #03e9f4);
+  animation: animate1 1s linear infinite;
+}
+
+@keyframes animate1 {
+  0% {
+    left: -100%;
+  }
+
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #03e9f4);
+  animation: animate2 1s linear infinite;
+  animation-delay: 0.25s;
+}
+
+@keyframes animate2 {
+  0% {
+    top: -100%;
+  }
+
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+
+a span:nth-child(3) {
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #03e9f4);
+  animation: animate3 1s linear infinite;
+  animation-delay: 0.5s;
+}
+
+@keyframes animate3 {
+  0% {
+    right: -100%;
+  }
+
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+
+a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #03e9f4);
+  animation: animate4 1s linear infinite;
+  animation-delay: 0.75s;
+}
+
+
+
+:root {
+  --alice: #f0f8ff;
+  --primary: #166aa9;
+  --primaryLight: #1669a9bb;
+  --secondary: #93ca5a;
+  --secondaryLight: #94ca5acd;
+  --text: #142848;
+  --white: #fff;
+  --content: #eaf2f9;
+  --placeHoldersColors: rgba(111, 110, 111, 1);
+  --borderColor: rgba(184, 184, 184, 1);
+  --contentGreyBackground: #f9fafd;
+  --placeholder: rgba(0, 0, 0, 0.85);
+  --borderColor: #d9d9d9;
+}
+
+
+#nav-bar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+
+/* Apply styles for screens smaller than 768px */
+@media (max-width: 767px) {
+  #nav-bar {
+    padding: 0 1rem;
+    font-size: 80%;
+  }
+}
+
+
+#nav-bar-buttons {
+  display: flex;
+  padding: 1rem 1.5rem;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.nav-link {
+  color: #050404;
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration: none;
+  padding: 0.5rem;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 5px #d11313;
+}
+
+
+.nav-link.active {
+  background-color: #ff4040;
+}
+
+
+
+
+.nav-btns {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+
+.img {
+  width: 100px;
+  background-color: #F25C54;
+}
+
+#footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.items {
+  display: flex;
+  padding: 1rem 1.5rem;
+  justify-content: space-around;
+}
+
+
+/* פה זה הסיסמאות */
+
+.password-container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.password {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  transition: all 0.7s ease-in-out;
+  cursor: pointer;
+  width: 300px;
+  height: 80px;
+  border: 2px solid #333;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.password.change {
+  transform: scale(1.2);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.password.change.visible {
+  opacity: 1;
+}
+
+label {
+  display: none;
+}
+
+/* פה זה המדד */
+
+.item {
+  text-align: center;
+}
+
+.donation-wrapper {
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+.donation-index {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.donation-index span {
+  color: red;
+}
+
+.donation-bar {
+  background-color: #eee;
+  height: 20px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.donation-bar-fill {
+  background-color: red;
+  height: 100%;
+  width: 0%;
+  transition: width 2s ease-in-out;
+}
+
+.donation-message {
+  font-size: 18px;
+  font-style: italic;
+}
+
+
+
+/* הקוד הבא זה הלוגו שזז בלמעלה */
